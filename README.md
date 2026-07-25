@@ -1,9 +1,10 @@
-# Job Board API
+# HireStone API
 
-FastAPI backend for a job board: employers post jobs, candidates upload resumes
+FastAPI backend for a job boarding plateform named **HireStone**. Here employers post jobs, candidates upload resumes
 and apply, employers track applications, admins get platform-wide stats.
 
 Built in phases:
+
 - **Basic** — models, JWT auth, CRUD for jobs/resumes/applications.
 - **Intermediate** — search filters, resume upload validation, status-change
   notifications, role-based guards, Alembic migrations.
