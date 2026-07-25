@@ -2,9 +2,9 @@
 name = "job-board"
 version = "0.1.0"
 description = "Job Board Platform API (FastAPI)"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.14"
 dependencies = [
-    "fastapi>=0.115.0",
+    "fastapi[standard]>=0.115.0",
     "uvicorn[standard]>=0.30.0",
     "sqlalchemy>=2.0.0",
     "psycopg2-binary>=2.9.9",

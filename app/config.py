@@ -2,10 +2,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    app_name: str = "Job Board API"
+    app_name: str = "HireStone API"
     env: str = "development"
+    cors_origins: str = "https://hirestone.netlify.app"
 
-    secret_key: str = "dev-secret-change-me"
+    secret_key: str = "64-character-dev-secret-change-me-in-production"
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 60
 
@@ -18,7 +19,7 @@ class Settings(BaseSettings):
     smtp_port: int = 587
     smtp_user: str = ""
     smtp_password: str = ""
-    notify_from_email: str = "no-reply@jobboard.local"
+    notify_from_email: str = "no-reply@hirestone.local"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
