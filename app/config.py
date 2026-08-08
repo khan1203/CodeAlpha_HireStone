@@ -15,6 +15,17 @@ class Settings(BaseSettings):
     upload_dir: str = "/app/uploads"
     max_resume_size_mb: int = 5
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    aws_access_key_id: str = ""
+    aws_secret_access_key: str = ""
+    aws_region: str = "ap-southeast-1"
+    s3_bucket_name: str = ""
+
+>>>>>>> 7e52a1e (resume stored into aws_s3_buckets)
+>>>>>>> 379ca77 (resumes stored in aws s3 bucket)
     smtp_host: str = ""
     smtp_port: int = 587
     smtp_user: str = ""

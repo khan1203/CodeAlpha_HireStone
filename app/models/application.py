@@ -1,10 +1,22 @@
 import enum
 from datetime import datetime
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 379ca77 (resumes stored in aws s3 bucket)
 
 from sqlalchemy import Text, DateTime, Enum, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
 
+<<<<<<< HEAD
+=======
+=======
+from sqlalchemy import Text, DateTime, Enum, ForeignKey, UniqueConstraint
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.sql import func
+>>>>>>> 7e52a1e (resume stored into aws_s3_buckets)
+>>>>>>> 379ca77 (resumes stored in aws s3 bucket)
 from app.database import Base
 
 
@@ -19,7 +31,14 @@ class ApplicationStatus(str, enum.Enum):
 class Application(Base):
     __tablename__ = "applications"
     __table_args__ = (UniqueConstraint("job_id", "candidate_id", name="uq_job_candidate"),)
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7e52a1e (resume stored into aws_s3_buckets)
+>>>>>>> 379ca77 (resumes stored in aws s3 bucket)
     id: Mapped[int] = mapped_column(primary_key=True)
     job_id: Mapped[int] = mapped_column(ForeignKey("job_listings.id", ondelete="CASCADE"), index=True)
     candidate_id: Mapped[int] = mapped_column(ForeignKey("candidates.id", ondelete="CASCADE"), index=True)
@@ -28,7 +47,19 @@ class Application(Base):
     status: Mapped[ApplicationStatus] = mapped_column(Enum(ApplicationStatus), default=ApplicationStatus.APPLIED, index=True)
     applied_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 379ca77 (resumes stored in aws s3 bucket)
 
     job: Mapped["JobListing"] = relationship(back_populates="applications")
     candidate: Mapped["Candidate"] = relationship(back_populates="applications")
     resume: Mapped["Resume"] = relationship(back_populates="applications")
+<<<<<<< HEAD
+=======
+=======
+    job: Mapped["JobListing"] = relationship(back_populates="applications")
+    candidate: Mapped["Candidate"] = relationship(back_populates="applications")
+    resume: Mapped["Resume"] = relationship(back_populates="applications")
+>>>>>>> 7e52a1e (resume stored into aws_s3_buckets)
+>>>>>>> 379ca77 (resumes stored in aws s3 bucket)
