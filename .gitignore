@@ -7,11 +7,3 @@ uploads/*
 !uploads/.gitkeep
 .pytest_cache
 *.egg-info
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7e52a1e (resume stored into aws_s3_buckets)
->>>>>>> 379ca77 (resumes stored in aws s3 bucket)
